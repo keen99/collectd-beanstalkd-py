@@ -3,6 +3,8 @@
 #
 
 import collectd
+#in addition to beanstalkc, you should also install pyyaml - else beanstalkc won't return dict's to stats().
+#but it won't error or warn, because collectd's python doesnt have a logger..
 from beanstalkc import Connection
 
 class Beanstalk(object):
